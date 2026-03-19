@@ -1,4 +1,0 @@
-﻿  mono-alphabetic.cpp
-D:\BaitapHK6\NT101-an toan mangj\lab1\caesar\mono-alphabetic\mono-alphabetic.cpp(61,19): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\BaitapHK6\NT101-an toan mangj\lab1\caesar\mono-alphabetic\mono-alphabetic.cpp(74,23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  mono-alphabetic.vcxproj -> D:\BaitapHK6\NT101-an toan mangj\lab1\caesar\mono-alphabetic\x64\Debug\mono-alphabetic.exe
