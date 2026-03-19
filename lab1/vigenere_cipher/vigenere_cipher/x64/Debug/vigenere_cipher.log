@@ -1,0 +1,3 @@
+﻿  vigenere_cipher.cpp
+D:\BaitapHK6\NT101-an toan mangj\lab1\caesar\vigenere_cipher\vigenere_cipher.cpp(15,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  vigenere_cipher.vcxproj -> D:\BaitapHK6\NT101-an toan mangj\lab1\caesar\vigenere_cipher\x64\Debug\vigenere_cipher.exe
