@@ -1,0 +1,15 @@
+# Visual Studio ẩn và tạm
+.vs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# File cấu hình cá nhân
+*.vcxproj.user
+
+# Các file build phụ trợ
+*.sdf
+*.opensdf
+*.ipch
+*.log
