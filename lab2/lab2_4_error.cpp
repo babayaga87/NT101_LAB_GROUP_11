@@ -18,15 +18,14 @@ vector<unsigned char> generate_data() {
 int test_mode(const EVP_CIPHER *cipher_type) {
     vector<unsigned char> data = generate_data();
 
-    unsigned char key[16] = "1234567890123456";
-    unsigned char iv[16] = "0000000000000000";
+    unsigned char key[17] = "1234567890123456";
+    unsigned char iv[17] = "0000000000000000";
 
     EVP_CIPHER_CTX *ctx = EVP_CIPHER_CTX_new();
 
     vector<unsigned char> ciphertext(DATA_SIZE + 16);
     int len, ciphertext_len;
 
-    // Encrypt
     EVP_EncryptInit_ex(ctx, cipher_type, NULL, key, iv);
     EVP_EncryptUpdate(ctx, ciphertext.data(), &len, data.data(), DATA_SIZE);
     ciphertext_len = len;
@@ -35,10 +34,8 @@ int test_mode(const EVP_CIPHER *cipher_type) {
 
     EVP_CIPHER_CTX_free(ctx);
 
-    // Flip 1 bit (byte 26)
     ciphertext[25] ^= 1;
 
-    // Decrypt
     ctx = EVP_CIPHER_CTX_new();
 
     vector<unsigned char> decrypted(DATA_SIZE + 16);
@@ -52,7 +49,6 @@ int test_mode(const EVP_CIPHER *cipher_type) {
 
     EVP_CIPHER_CTX_free(ctx);
 
-    // Compare
     int diff = 0;
     for (int i = 0; i < DATA_SIZE; i++) {
         if (data[i] != decrypted[i])
