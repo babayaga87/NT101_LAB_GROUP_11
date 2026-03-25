@@ -11,7 +11,7 @@ pair<int,int> feistel_round(int L, int R, int subkey){
 }
 
 void track(int msg, int key){
-    int L=(msg>>4)&0x0F;        
+    int L=(msg>>4)&0x0F;
     int R=msg&0x0F;
 
     int subkeys[4]={key&0x0F,(key>>4)&0x0F,(key+1)&0x0F,(key+2)&0x0F};
